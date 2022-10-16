@@ -5,20 +5,20 @@ import matplotlib.pyplot as plt
 from matplotlib import ticker, cm
 
 data = pd.read_csv("dataMAIN.csv",header = None)
-xydf = pd.read_csv("x_y.csv", header = None)
+#xydf = pd.read_csv("x_y.csv", header = None)
 #print('\nAlgandmed\n',data.head())
 origin = 'lower'
 Tmax = len(data)
 T = data.drop(data.columns[[Tmax]], axis=1)
 N = len(T)
 #print('\nAlgandmed\n',T.head())
-x_feat = xydf.drop(data.columns[[1]], axis=1)
-y_feat = xydf.drop(data.columns[[0]], axis=1)
+#x_feat = xydf.drop(data.columns[[1]], axis=1)
+#y_feat = xydf.drop(data.columns[[0]], axis=1)
 #print(x_feat.head())
 # Implementation of matplotlib function
 Z = T.values
 #print(Z)
-fig = plt.figure(figsize=(12,8))
+fig = plt.figure(figsize=(8,8))
 colbar = plt.imshow(Z, cmap='viridis', interpolation='none', 
                     extent=[0, N, 0, N], origin='lower', aspect='auto')
 plt.clim(-1, 1) #fixes limits of color bar
