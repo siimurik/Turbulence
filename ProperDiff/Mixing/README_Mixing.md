@@ -1,7 +1,7 @@
 # Documenation for sinusoidal mixing homework
 
 The main file that does the computations is the file 'mixing.c'.
-Plotting is done with a Python file named 'plot_mixF.py'
+Plotting is done with a Python file named 'plot_mixF.py'.
 
 ## How to run the codes
 I have written a simple bash .sh file that can be run with the command:
@@ -16,6 +16,10 @@ To compile the C file, you have to use the command
 and then plot the data with the command
 
     python3 plot_mixF.py
+
+## Images
+There are two sets of images, main difference comes from what is used to take the Fourier transform: Python's NumPy commands or functions in the C code. 
+Python's plot looks better, but the one generated with the C code gives a better overview what is done.
 
 ## Specifics of file 'mixing.c'
 Firstly, the main part contains two functions that handle the diffusive sinusoidal mixing: 'p_diffuse' and 'iterate'. Essentially, 'iterate' calls the 'p_diffuse' a N amount of times until we have proper diffusion. I found 11 to be quite sufficient. Otherwise the images get very pixelated.  
