@@ -1,8 +1,28 @@
 /*
 ===============================================================================
- Complile and execute with:
+ Compile and execute with:
     $ gcc mixing.c -o mix -lm -lfftw3
     $ ./mix
+===============================================================================
+ Algorithm that computes the values for sinusoidal mixing with diffusion using
+ bitwise manipulation. The values of the output matrix are in the file 
+ 'colors.csv'.
+ 
+ The code also takes the Fourier transform and shifts the zero-frequency 
+ component to the center of the spectrum. The output of those compuations is
+ written in the file 'fourier.csv'.
+ 
+ The number of iterations necessary to get proper diffusion in this case was
+ was '11'. The number can of iterations can be changed in the main part of 
+ the code in the function 'iterate()'.
+-------------------------------------------------------------------------------
+ NB! Important!
+ To run the code, it is required that the user has installed the FFTW libarary
+ for the C compiler. On Ubuntu linux it can be done with the command:
+    $ sudo apt-get install libfftw3-dev
+-------------------------------------------------------------------------------
+ Author: Siim Erik Pugal
+ Date: December 2022
 ===============================================================================
 */
 #include <stdio.h>
