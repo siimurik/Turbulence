@@ -17,9 +17,11 @@ and then plot the data with the command
 
     python3 plot_mixF.py
 
-## Images
+## Images and ImageJ analysis
 There are two sets of images, main difference comes from what is used to take the Fourier transform: Python's NumPy commands or functions in the C code. 
 Python's plot looks better, but the one generated with the C code gives a better overview what is done.
+
+To see the Kolomogorov power law after taking Fourier transform, see the Excel PDF data sheet ('ImageJ_data_n_power_law.pdf').
 
 ## Specifics of file 'mixing.c'
 Firstly, the main part contains two functions that handle the diffusive sinusoidal mixing: 'p_diffuse' and 'iterate'. Essentially, 'iterate' calls the 'p_diffuse' a N amount of times until we have proper diffusion. I found 11 to be quite sufficient. Otherwise the images get very pixelated.  
